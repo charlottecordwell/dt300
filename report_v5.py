@@ -87,7 +87,7 @@ def validate():
         tkinter.messagebox.showwarning("Warning!",
         "Please put in a first or last name with less than 30 characters.")
     elif true_int is False or len(str(istudent_no)) > STUDENTNO_LEN \
-    or len(str(istudent_no)) < STUDENTNO_LEN or istudent_no < 0:
+         or len(str(istudent_no)) < STUDENTNO_LEN or istudent_no < 0:
             tkinter.messagebox.showwarning("Warning!",
             "Please enter a valid, numeric student number that is 5 digits.")
     elif no_duplicate is False:
@@ -107,8 +107,8 @@ def processdata():
     uback = background_c.get()
     uconstructive = constructive_c.get()
     uclasswork = classwork_c.get()
-    paragraph = ("%s is %s Some thing to work on is that %s %s %s")\
-    % (ufn, uback, uconstructive, ufn, uclasswork)
+    paragraph = ("%s is %s Something to work on is that %s %s %s")\
+                % (ufn, uback, uconstructive, ufn, uclasswork)
     # paragraph for final rport putting together sentences
     student_nos.append(ustudent_no)
     # this is then used in validate() to check for duplicates
@@ -175,7 +175,7 @@ constructive_c = StringVar()
 constructive_c.set(CONSTRUCTIVE[0])
 
 CLASS_WORK = ["completes work to a high standard.",
-              "completes Work.", "does not do assgined work."]
+              "completes work.", "does not do assgined work."]
 classwork_c = StringVar()
 classwork_c.set(CLASS_WORK[0])
 
